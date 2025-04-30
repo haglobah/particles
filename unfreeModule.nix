@@ -1,14 +1,6 @@
 { ... }:
 {
-  perSystem = {
-    config,
-    lib,
-    pkgs,
-    system,
-    ...
-  }: {
-    _module.args.pkgs = {
-      config.allowUnfree = true;
-    };
+  _module.args.pkgs = {
+    config.allowUnfree = true;
   };
 }
