@@ -1,17 +1,13 @@
+{ ... }:
 {
-  self,
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
   perSystem = {
     config,
+    lib,
+    pkgs,
     system,
     ...
   }: {
-    _module.args.pkgs = import self.inputs.nixpkgs {
-      inherit system;
+    _module.args.pkgs = {
       config.allowUnfree = true;
     };
   };
